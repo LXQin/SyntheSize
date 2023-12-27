@@ -98,7 +98,7 @@ print(p_acc)
 ```
 
 ## Examples & Tutorials
-Using the 500 generated samples on RNABRCASubtype dataset by CVAE with loss ratio 1-5,, we demonstrate how to execute 'Synthesize'. 1. Evaluate the generated data using UMAP and heatmap. 2. Train the classiers including xgboost and randomforest and fit a learning curve. 3. Get the desired sample size according to the prediction accuracy on the fitted curve. <br>
+Using the 500 generated samples on RNABRCASubtype dataset by CVAE with loss ratio 1-5, we demonstrate how to execute 'Synthesize'. 1. Evaluate the generated data using UMAP and heatmap. 2. Train the classiers including xgboost and randomforest and fit a learning curve. 3. Get the desired sample size according to the prediction accuracy on the fitted curve. <br>
 
 If you also would like to use 'SyntheSize' in R, continue here:
 + [SyntheSize Tutorial in R](https://github.com/LXQin/SyntheSize/blob/main/SyntheSize/SyntheSizeExample.Rmd)
