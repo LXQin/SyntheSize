@@ -1,0 +1,77 @@
+---
+title: "SyntheSize Example"
+author: "YunhuiQi"
+date: "2023-12-23"
+output: html_document
+---
+
+# This document is used to show an example for SyntheSize
+
+## To start, you should have a real pilot data file and a generated data file from our python program. Usually, the generated data are already log2 scaled. In addition, if your real data has two sample groups, the last column of the generated data file will also be a group label variable with levels 0 and 1, 0 is for the group label that is firstly shown in the real data. 
+
+## This example file show how do we evaluate and bulid classifiers on the generated TCGA BRCA RNA-seq samples with sample groups (IDC vs ILC).
+
+
+
+
+```{r, source the code for SyntheSize}
+source(file = "SyntheSizeSource.R")
+```
+
+```{r, RNABRCASubtype, CVAE1-150, generated 500 each, quality evaluation}
+# read in data
+generated <- read.csv("ExampleData/RNABRCASubtypeSel258_epochES_CVAE1-150_generated.csv", header = F)
+real <- read.csv("ExampleData/RNABRCASubtypeSel258.csv", header = T)
+
+# define the default group level
+level0 <- real$groups[1]
+level1 <- setdiff(unique(real$groups), level0)
+
+# get sample groups
+real <- real[order(real$groups),]
+groups_real <- real$groups
+groups_generated <- ifelse(generated[, ncol(generated)] == 0, level0, level1)
+
+# get pure data matrices
+real <- select_if(real, is.numeric)
+real <- log2(real + 1)
+generated <- generated[,1:ncol(real)]
+colnames(generated) <- colnames(real)
+
+# heatmap quality evaluation (we only keep 200 samples for each group to save runing time)
+real_ind <- c(1:200, (nrow(real)-200):nrow(real))
+generated_ind <- c(1:200, (nrow(generated)-200):nrow(generated))
+h_subtypes <- heatmap_eval(dat_real = real[real_ind,],
+                           dat_generated = generated[generated_ind,])
+
+# UMAP quality evaluation
+p_umap_subtypes <- UMAP_eval(dat_real = real[real_ind,],
+                             dat_generated = generated[generated_ind,],
+                             groups_real = groups_real[real_ind],
+                             groups_generated = groups_generated[generated_ind],
+                             legend_pos = "bottom")
+print(h_subtypes)
+print(p_umap_subtypes)
+```
+
+
+
+
+```{r RNABRCASubtype classification accurary multiple classifier, warning=FALSE, fig.width=6, fig.height=12}
+set.seed(333)
+n_candidate <- c(seq(100, 400, 25))
+n_target <- seq(410, 430, 10)
+metric_generated <- eval_classifier(whole_generated = generated,
+                                    whole_groups = groups_generated,
+                                    n_candidate = n_candidate,
+                                    n_draw = 2, log = TRUE)
+metric_real <- eval_classifier(whole_generated = real, 
+                               whole_groups = groups_real, 
+                               n_candidate = n_candidate,
+                               n_draw = 2, log = TRUE)
+p_acc <- vis_classifier(metric_generated = metric_generated, 
+                        metric_real = metric_real,
+                        n_target = n_target)
+print(p_acc)
+```
+
