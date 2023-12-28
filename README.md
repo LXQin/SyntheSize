@@ -1,4 +1,4 @@
-# SyntheSize: 
+# SyntheSize
 
 ## What is it
 
@@ -41,7 +41,7 @@ The developmental version of the package has been tested on the following system
     ROCR 1.0-11
     class 7.3-22
 
-## Evaluations of Generated data in R
+## Evaluations of generated data in R
 ```R
 # read in data
 generated <- read.csv("ExampleData/RNABRCASubtypeSel258_epochES_CVAE1-150_generated.csv", header = F)
