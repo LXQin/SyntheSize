@@ -110,7 +110,7 @@ Please cite the following manuscript:
 Tao Ren, Canping Chen, Alexey V. Danilov, Susan Liu, Xiangnan Guan, Shunyi Du, Xiwei Wu, Mara H. Sherman, Paul T. Spellman, Lisa M. Coussens, Andrew C. Adey, Gordon B. Mills, Ling-Yun Wu and Zheng Xia
 
 
-## License (unfinished)
+## License
 SyntheSize is licensed under the GNU General Public License v3.0. <br>
-SyntheSize will be updated frequently with new features and improvements. If you have any questions, please submit them on the [GitHub issues page](https://github.com/cliffren/PENCIL/issues) or check the [FAQ](https://cliffren.github.io/PENCIL/examples/FAQ/PENCIL_FAQ.html) list.
+SyntheSize will be updated frequently with new features and improvements. If you have any questions, please submit them on the [GitHub issues page]().
 
