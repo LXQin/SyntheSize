@@ -114,3 +114,6 @@ Tao Ren, Canping Chen, Alexey V. Danilov, Susan Liu, Xiangnan Guan, Shunyi Du, X
 SyntheSize is licensed under the GNU General Public License v3.0. <br>
 SyntheSize will be updated frequently with new features and improvements. If you have any questions, please submit them on the [GitHub issues page](https://github.com/LXQin/SyntheSize/issues).
 
+## Reference
+Cortes, C., Jackel, L. D., Solla, S., Vapnik, V., & Denker, J. (1993). Learning curves: Asymptotic values and rate of convergence. Advances in neural information processing systems, 6. ![image](https://github.com/LXQin/SyntheSize/assets/48995271/d39a1a36-c44e-4dde-aa33-31d8a8db2a2b)
+
