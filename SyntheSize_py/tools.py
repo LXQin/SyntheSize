@@ -6,11 +6,9 @@ from sklearn.linear_model import LogisticRegressionCV
 from sklearn.metrics import roc_auc_score, accuracy_score
 import numpy as np
 from sklearn.svm import SVC
-from sklearn.metrics import roc_auc_score, accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import roc_auc_score, accuracy_score
 import xgboost as xgb
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
