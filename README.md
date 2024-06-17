@@ -104,10 +104,10 @@ If you also would like to use 'SyntheSize' in R, continue here:
 + [SyntheSize Tutorial in R](https://github.com/LXQin/SyntheSize/blob/main/SyntheSize/SyntheSizeExample.Rmd)
 
 
-## How to Cite SyntheSize (unfinished)
+<!--## How to Cite SyntheSize (unfinished)
 Please cite the following manuscript:
 >Supervised learning of high-confidence phenotypic subpopulations from single-cell data. Nature Machine Intelligence (2023). https://doi.org/10.1038/s42256-023-00656-y. <br>
-Tao Ren, Canping Chen, Alexey V. Danilov, Susan Liu, Xiangnan Guan, Shunyi Du, Xiwei Wu, Mara H. Sherman, Paul T. Spellman, Lisa M. Coussens, Andrew C. Adey, Gordon B. Mills, Ling-Yun Wu and Zheng Xia
+Tao Ren, Canping Chen, Alexey V. Danilov, Susan Liu, Xiangnan Guan, Shunyi Du, Xiwei Wu, Mara H. Sherman, Paul T. Spellman, Lisa M. Coussens, Andrew C. Adey, Gordon B. Mills, Ling-Yun Wu and Zheng Xia -->
 
 
 ## License
