@@ -18,7 +18,7 @@ source(file = "SyntheSizeSource.R")
 
 ```{r, RNABRCASubtype, CVAE1-150, generated 500 each, quality evaluation}
 # read in data
-generated <- read.csv("ExampleData/RNABRCASubtypeSel258_epochES_CVAE1-150_generated.csv", header = F)
+generated <- read.csv("ExampleData/modified_RNABRCASubtypeSel258_epochES_CVAE1-150_generated.csv", header = F)
 real <- read.csv("ExampleData/RNABRCASubtypeSel258.csv", header = T)
 
 # define the default group level
