@@ -54,6 +54,7 @@ level1 <- setdiff(unique(real$groups), level0)
 # get sample groups
 real <- real[order(real$groups),]
 groups_real <- real$groups
+#The first group label shown in the input data of SyNGBTS is coded as 0, the other group label is coded as 1. here we have Ductal as the first group label.
 groups_generated <- ifelse(generated[, ncol(generated)] == 0, level0, level1)
 
 # get pure data matrices
